@@ -36,7 +36,7 @@ public class NetworkSimulation {
         routePacket(graph, "A", "F");
     }
 
-    // Computes and prints forwarding tables for all nodes
+    // Compute and prints forwarding tables for all nodes
     private static void computeAndPrintForwardingTables(Graph graph) {
         for (String node : graph.getNodes()) {
             System.out.println("Forwarding Table for Node " + node + ":");
@@ -81,7 +81,7 @@ public class NetworkSimulation {
     }
 }
 
-// Represents a forwarding table entry
+// Forwarding table entry
 class ForwardingTableEntry {
     String nextHop;
     int cost;
@@ -92,7 +92,7 @@ class ForwardingTableEntry {
     }
 }
 
-// Graph class to represent the network
+// Graph class to the network
 class Graph {
     private final Map<String, List<Edge>> nodes = new HashMap<>();
 
@@ -156,7 +156,7 @@ class Graph {
         return forwardingTable;
     }
 
-    // Computes the next hop for a given destination
+    // Computes next hop for a given destination
     private String computeNextHop(String destination, Map<String, String> previous, String start) {  
     	   String current = destination;  
     	  
